@@ -1,0 +1,26 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+  }
+  
+  td, th {
+    border: 1px solid #9297aa;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  tr:nth-child(odd) {
+    color: #dddddd;
+  }
+
+  @media screen and (max-width:600px) {
+      table h2{
+          font-size: 27px;
+      }
+      
+  }

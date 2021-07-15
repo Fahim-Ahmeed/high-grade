@@ -28,8 +28,8 @@ function Nav() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
-                Features
+              <Link className="nav-link" to="/service">
+                Service
               </Link>
             </li>
             <li className="nav-item">
@@ -39,7 +39,7 @@ function Nav() {
             </li>
             <li className="nav-item">
               <Link className="nav-link disabled" to="#">
-                Disabled
+                Admin
               </Link>
             </li>
           </ul>
