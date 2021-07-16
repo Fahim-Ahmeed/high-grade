@@ -1,0 +1,45 @@
+.quality{
+    background: rgb(36, 36, 82);
+    /* padding: 30px; */
+    /* width: 90%; */
+    /* margin: auto; */
+    /* color: #fff; */
+    /* height: 400px; */
+}
+.card{
+    box-shadow: 5px 5px 10px rgb(100, 106, 133);
+}
+.my-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+}
+.my-row .card-body:hover{
+     background-color: rgb(223, 247, 185); 
+     color: #000;
+      
+}
+.my-btn{
+    width: 100%;
+    margin: 0;
+}
+
+ 
+
+@media screen and (max-width:800px) {
+    .my-row{
+        display: flex;
+        flex-direction: column;
+        /* padding: 40px 0; */
+        /* justify-content: space-around;
+        align-items: center; */
+    }
+    .card{
+        margin-top: 3rem;
+
+    }
+     
+}
+ 
+

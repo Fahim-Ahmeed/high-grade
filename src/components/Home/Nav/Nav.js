@@ -6,11 +6,11 @@ function Nav() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light text-center">
-        <Link className="navbar-brand" to="#">
-          <h2>Garments</h2>
+        <Link className="navbar-brand" to="/">
+          <h2>HIGH GRADE</h2>
         </Link>
         <button
-          className="navbar-toggler  bg-primary"
+          className="navbar-toggler my-nav-btn  bg-primary"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -23,7 +23,7 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto my-menu">
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/">
                 Home <span className="sr-only">(current)</span>
               </Link>
             </li>
@@ -33,12 +33,17 @@ function Nav() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
-                Pricing
+              <Link className="nav-link" to="/supply">
+                Supply
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link disabled" to="#">
+              <Link className="nav-link" to="/tools">
+                Tools
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link disabled" to="/login">
                 Admin
               </Link>
             </li>
