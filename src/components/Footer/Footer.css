@@ -1,0 +1,14 @@
+.footer{
+    background: rgb(28, 17, 68);
+    color: #fff; 
+    padding: 10px;
+    overflow: hidden;
+}
+.footer p{
+    font-size: 14px;
+    /* text-align: justify; */
+}
+.row{
+    width: 90%;
+    margin: auto;
+}

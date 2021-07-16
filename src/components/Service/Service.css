@@ -18,9 +18,14 @@ table {
     color: #dddddd;
   }
 
+  .btn-color{
+    background: rgb(88, 70, 131);
+    margin: 0;
+  }
+
   @media screen and (max-width:600px) {
       table h2{
-          font-size: 27px;
+          font-size: 25px;
       }
       
   }
