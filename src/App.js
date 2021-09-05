@@ -10,10 +10,21 @@ import PromiseDetail from './components/PromiseDetail/PromiseDetail';
 import Supply from './components/Supply/Supply';
 import Tools from './components/Tools/Tools';
 import Login from './components/Login/Login';
-
+import PrivateRoute from './components/Login/PrivateRoute';
+import Contact from './components/Home/Contact/Contact';
+import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import React ,{createContext,useState}from'react';
+import AddPhotos from './components/AdminDashboard/AddPhotos/AddPhotos';
+import Photos from './components/AdminDashboard/Photos/Photos';
+export const adminContext=createContext();
 function App() {
+
+const [admin,setAdmin]=useState({
+    email:'',
+    password:''
+});
   return (
-     
+     <adminContext.Provider value={[admin,setAdmin]}>
        <Router>
           <Switch>
               <Route exact path="/">
@@ -34,8 +45,21 @@ function App() {
               <Route path="/login">
                   <Login></Login>
               </Route>
+              <Route path="/contact">
+                <Contact></Contact>
+              </Route>
+              <PrivateRoute path="/dashboard">
+                  <AdminDashboard></AdminDashboard>
+              </PrivateRoute>
+              <PrivateRoute path="/addphotos">
+                 <AddPhotos></AddPhotos>
+              </PrivateRoute>
+              <PrivateRoute path="/photos">
+                  <Photos></Photos>
+              </PrivateRoute>
           </Switch>
        </Router>
+       </adminContext.Provider>
      
   );
 }
