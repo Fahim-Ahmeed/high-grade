@@ -10,7 +10,7 @@ import 'react-multi-carousel/lib/styles.css';
 function Slider() {
   const[images,setImages]=useState([]);
   const allImages=()=>{
-    fetch('https://secret-spire-68459.herokuapp.com/getPhotos')
+    fetch('https://secret-spire-68459.herokuapp.com/getWorkPhotos')
     .then(response => response.json())
     .then(data => {
         if (data) {
@@ -26,7 +26,6 @@ useEffect(() => {
 
 
 }, [])
-console.log(images)
 
 
 
@@ -50,6 +49,8 @@ const responsive = {
   }
 };
   return (
+    // <>
+    // </>
     <Carousel 
     swipeable={false}
     draggable={false}
@@ -68,16 +69,25 @@ const responsive = {
     dotListClass="custom-dot-list-style"
     itemClass="carousel-item-padding-40-px"
 >
-      { 
-        images.map(
-          image => 
-          <div>
-         <img className="d-block w-100" src={image.imageLink} alt="First slide" />
-          </div>
-          
-       
-        )
-         }
+        
+{
+  images.length > 0
+  
+  ?
+  images.map(
+    image => 
+    <div key={image._id}>
+   <img className="d-block w-100" src={image.imageLink} alt="First slide" />
+    </div>
+    
+ 
+  )
+  :
+  <div>
+    <img src={img1} alt="" />
+  </div>
+}
+         
   </Carousel>
   );
 }

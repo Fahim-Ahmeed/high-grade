@@ -16,6 +16,10 @@ import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import React ,{createContext,useState}from'react';
 import AddPhotos from './components/AdminDashboard/AddPhotos/AddPhotos';
 import Photos from './components/AdminDashboard/Photos/Photos';
+import WorkPhotos from './components/AdminDashboard/AddPhotos/WorkPhotos/WorkPhotos';
+import GoverningMembers from './components/AdminDashboard/AddPhotos/GoverningMembers/GoverningMembers';
+import AllGoverningMembers from './components/AdminDashboard/Photos/AllGoverningMembers/AllGoverningMembers';
+import AllWorkPhotos from './components/AdminDashboard/Photos/AllWorkPhotos/AllWorkPhotos';
 export const adminContext=createContext();
 function App() {
 
@@ -54,8 +58,20 @@ const [admin,setAdmin]=useState({
               <PrivateRoute path="/addphotos">
                  <AddPhotos></AddPhotos>
               </PrivateRoute>
+              <PrivateRoute path="/addworkPhotos">
+              <WorkPhotos></WorkPhotos>
+              </PrivateRoute>
+              <PrivateRoute path="/addGoverningMembers">
+                <GoverningMembers></GoverningMembers>
+              </PrivateRoute>
               <PrivateRoute path="/photos">
                   <Photos></Photos>
+              </PrivateRoute>
+              <PrivateRoute path="/workPhotos">
+                <AllWorkPhotos></AllWorkPhotos>
+              </PrivateRoute>
+              <PrivateRoute path="/GoverningMembers">
+              <AllGoverningMembers></AllGoverningMembers> 
               </PrivateRoute>
           </Switch>
        </Router>

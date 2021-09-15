@@ -29,8 +29,8 @@ function Quality() {
             </h2>
             <div className="my-row pb-5">
                 
-
-                {/* col 1 */}
+          
+               
                  
                 
                          
@@ -46,7 +46,6 @@ function Quality() {
                   
                  
 
-                {/* col 2 */}
                  
                    
                         <div data-aos="zoom-in" className="card" style={{width: '18rem'}}> 
@@ -56,11 +55,11 @@ function Quality() {
                                 <p>HIGH GRADE Erection & Engineering isn't just about building. We set out to improve the world we all live in; both through the projects we undertake and the way we approach them. Our Corporate Culture embraces a strong...</p>
                             </div>
                             <Link to="/detail"><button className="btn btn-primary my-btn">See More</button></Link>
-                        </div> 
+                        </div>  
                    
                 
 
-                {/* col 3 */}
+             
                 
                    
                         <div data-aos="fade-left" className="card" style={{width: '18rem'}}> 

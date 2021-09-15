@@ -1,41 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Nav from '../../Home/Nav/Nav';
 import SideNav from '../SideNav/SideNav';
+import { NavLink,useLocation} from 'react-router-dom';
 
 const Photos = () => {
-    const[images,setImages]=useState([]);
-    const allImages=()=>{
-      fetch('https://secret-spire-68459.herokuapp.com/getPhotos')
-      .then(response => response.json())
-      .then(data => {
-          if (data) {
-              setImages(data)
-          }
-      })
-    }
-   
-  useEffect(() => {
-    allImages()
-   
-  
-  
-  }, [])
-
-  const deletePhoto = (id) => {
-    fetch(`https://secret-spire-68459.herokuapp.com/deletePhoto/${id}`, {
-        method: 'DELETE',
-    })
-        .then(result => {
-            if (result) {
-                allImages()
-            }
-        })
-}
+    const location = useLocation();
     return (
         <>
-        <Nav></Nav>
-        <SideNav></SideNav>
-        <h2 className="text-center text-success mb-5">Your Photos</h2>
+          {(location.pathname==='/photos')&&
+         <>
+         <Nav></Nav>
+         <SideNav></SideNav>
+         </>
+        }
+        <aside className='col-md-2 sideNav text-center p-0'>
+        <div className="container ">
+                <ul className='list-unstyled text-left ml-4 mt-4'>
+                    </ul>
+                    <NavLink to="/workPhotos"
+                        
+                        activeStyle={{
+                            fontWeight: "bold",
+                            paddingBottom: '0px',
+                            borderBottom: '3px solid #7AB259',
+                            textDecoration: 'none',
+                            color: '#009444'
+                        }}>
+                             <li className='mb-3' >
+                         Work Photos
+                        </li>
+                            </NavLink>
+
+                            <NavLink to="/GoverningMembers"
+                                        activeStyle={{
+                                        fontWeight: "bold",
+                                        paddingBottom: '0px',
+                                        borderBottom: '3px solid #7AB259',
+                                        textDecoration: 'none',
+                                        color: '#009444'
+                                    }}>
+                                         <li className='mb-3' >
+                                         Governing  Members
+                                    </li>
+                                        </NavLink>
+                    </div>
+            </aside>
+        {/* <h2 className="text-center text-success mb-5">Your Photos</h2>
         <div  className="row">
             
             {
@@ -47,7 +57,7 @@ const Photos = () => {
                     )
             }
            
-        </div>
+        </div> */}
         </>
     );
 };
