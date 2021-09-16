@@ -20,6 +20,9 @@ import WorkPhotos from './components/AdminDashboard/AddPhotos/WorkPhotos/WorkPho
 import GoverningMembers from './components/AdminDashboard/AddPhotos/GoverningMembers/GoverningMembers';
 import AllGoverningMembers from './components/AdminDashboard/Photos/AllGoverningMembers/AllGoverningMembers';
 import AllWorkPhotos from './components/AdminDashboard/Photos/AllWorkPhotos/AllWorkPhotos';
+import ErectionEngineering from './components/Home/HighGrade/PrimarySection/ErectionEngineering/ErectionEngineering';
+import FashionFabrics from './components/Home/HighGrade/PrimarySection/FashinFabrics/FashionFabrics';
+import HardwareTools from './components/Home/HighGrade/PrimarySection/HardwareTools/HardwareTools';
 export const adminContext=createContext();
 function App() {
 
@@ -51,6 +54,15 @@ const [admin,setAdmin]=useState({
               </Route>
               <Route path="/contact">
                 <Contact></Contact>
+              </Route>
+              <Route  path="/erection&engineering">
+                  <ErectionEngineering></ErectionEngineering>
+              </Route>
+              <Route  path="/fashion&fabrics">
+                  <FashionFabrics></FashionFabrics>
+              </Route>
+              <Route  path="/hardware&tools">
+                  <HardwareTools></HardwareTools>
               </Route>
               <PrivateRoute path="/dashboard">
                   <AdminDashboard></AdminDashboard>

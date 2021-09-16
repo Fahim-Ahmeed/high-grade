@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Nav from "../../../Home/Nav/Nav";
 import SideNav from "../../SideNav/SideNav";
 import Photos from "../Photos";
+import loadings from "../../../../images/loading.gif"
 
 const AllWorkPhotos = () => {
     const[images,setImages]=useState([]);
@@ -42,12 +43,13 @@ const AllWorkPhotos = () => {
         <div  className="row">
             
             {
-                images.map(image => 
-                    <div className="col-md-4" key={image._id}>
-                    <img src={image.imageLink} className="img-fluid" alt="" />
-                    <button className="btn btn-danger" onClick={() => deletePhoto(image._id)}>Delete</button>
-                </div>
-                    )
+               images.length===0?<img className="d-flex justify-content-center" src={loadings} alt="" />:
+               images.map(image => 
+                <div className="col-md-4" key={image._id}>
+                <img src={image.imageLink} className="img-fluid" alt="" />
+                <button className="btn btn-danger" onClick={() => deletePhoto(image._id)}>Delete</button>
+            </div>
+                )
             }
            
         </div> 

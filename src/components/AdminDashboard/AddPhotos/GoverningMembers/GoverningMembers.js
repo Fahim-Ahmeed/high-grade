@@ -62,10 +62,10 @@ const GoverningMembers = () => {
         <Nav></Nav>
         <SideNav></SideNav>
         <AddPhotos></AddPhotos>
-        <div className="center">
-        <h2 className="text-center">ADD Governing Members</h2>
+        <h2 className="text-center text-success mb-5">ADD Governing Members</h2>
+        <div className="d-flex justify-content-center">
             <form onSubmit={handleSubmit(onSubmit)} className="myForm" > 
-              <div className="col-md-6">
+              <div className="">
                                     
                                     <label htmlFor="uploadImg" className='upload-file-btn text-center'>
                                     <input onChange={handleImageUpload} className='upload-file-inp' type="file" name="file" id="uploadImg" />
@@ -73,10 +73,10 @@ const GoverningMembers = () => {
                                         imageName?imageName:'Select image'
                                       }
                                       </label>
-                                      <p className='m-0'>Title</p>
+                                      <p className='m-0 text-primary'>Title</p>
                                     <input required  onBlur={event => setTittle(event.target.value)} vlaue={tittle} className='form-control mb-4' name='tittle' type="text" />
                                 </div>
-                                <div className="col-md-6">
+                                <div className="">
                                   {
                                     message&&<p className="text-success mt-5">Your file is ready ,now you can click Upload button</p>
                                   }

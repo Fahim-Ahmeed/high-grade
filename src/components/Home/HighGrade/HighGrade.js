@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typical from 'react-typical'
+import PrimarySection from './PrimarySection/PrimarySection';
 
 const HighGrade = () => {
   const[members,setMembers]=useState([]);
@@ -43,8 +44,8 @@ const HighGrade = () => {
             />
             </h4> 
            
-            <div className="container col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                <Carousel  autoPlay={true} infiniteLoop showThumbs={false} interval="2000"
+            <div className="mt-5 mb-5 container col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <Carousel  autoPlay infiniteLoop showThumbs={false} interval="3000"
                 dynamicHeight
                 
                 >
@@ -52,13 +53,18 @@ const HighGrade = () => {
                        members.map(member => 
                       <div className=" " key={member._id}>
                       <img src={member.imageLink} className="img-fluid img-thumbnail" alt="" />
-                      <p  className="legend">{member.tittle}</p>
+                      <p  className="legend text-info">
+                      {member.tittle}
+                      </p>
+    
                  
                   </div>
                        )
                   }
                   </Carousel>
+                  
             </div>
+            <PrimarySection></PrimarySection>
             </section>
     );
 };

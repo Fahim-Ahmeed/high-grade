@@ -62,7 +62,7 @@ function Quality() {
              
                 
                    
-                        <div data-aos="fade-left" className="card" style={{width: '18rem'}}> 
+                        <div data-aos="fade-right" className="card" style={{width: '18rem'}}> 
                             <img className="card-img-top" src={pic3} alt="" />
                             <div className="card-body">
                                 <h4 className="text-primary">Safety</h4>

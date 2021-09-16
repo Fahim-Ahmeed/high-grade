@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Nav from "../../../Home/Nav/Nav";
 import SideNav from "../../SideNav/SideNav";
 import Photos from "../Photos";
+import loadings from "../../../../images/loading.gif"
 
 const AllGoverningMembers = () => {
     const[images,setImages]=useState([]);
@@ -39,9 +40,10 @@ const AllGoverningMembers = () => {
         <Photos></Photos>
         <div>
              <h2 className="text-center text-success mb-5">Governing Members</h2>
-        <div  className="row">
+        <div  className="row d-flex justify-content-center">
             
             {
+                images.length===0?<img src={loadings} alt="" />:
                 images.map(image => 
                     <div className="col-md-4" key={image._id} >
                     <img src={image.imageLink} className="img-fluid" alt="" />

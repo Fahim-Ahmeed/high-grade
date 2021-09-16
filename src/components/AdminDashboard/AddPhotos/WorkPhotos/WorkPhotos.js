@@ -60,8 +60,8 @@ const WorkPhotos = () => {
         <Nav></Nav>
         <SideNav></SideNav>
         <AddPhotos></AddPhotos>
-             <div className="center">
-           <h2 className="text-center">ADD Work Photos</h2>
+        <h2 className="text-center text-success mb-5">ADD Work Photos</h2>
+             <div className="d-flex justify-content-center">
             <form onSubmit={handleSubmit(onSubmit)} className="myForm" > 
               <div className="col-md-6">
                                     

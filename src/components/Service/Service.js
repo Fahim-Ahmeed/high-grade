@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Home/Nav/Nav';
 import { useLocation } from 'react-router-dom';
 
+
 function Service() {
   const location = useLocation();
   return (
@@ -80,7 +81,9 @@ function Service() {
         </div>
   
         {/* footer */}
-        <Footer></Footer>
+       {
+         location.pathname ==='/service'&& <Footer></Footer>
+       }
       </div>
       </>
       :
